@@ -50,7 +50,11 @@ class CartController extends Controller
             $cart->save();
             $wishlist=Wishlist::where('user_id',auth()->user()->id)->where('cart_id',null)->update(['cart_id'=>$cart->id]);
         }
+<<<<<<< HEAD
         request()->session()->flash('success','Book successfully added to cart');
+=======
+        request()->session()->flash('success','Product successfully added to cart');
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         return back();       
     }  
 
@@ -96,7 +100,11 @@ class CartController extends Controller
             // return $cart;
             $cart->save();
         }
+<<<<<<< HEAD
         request()->session()->flash('success','Book successfully added to cart.');
+=======
+        request()->session()->flash('success','Product successfully added to cart.');
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         return back();       
     } 
     

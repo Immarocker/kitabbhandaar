@@ -1,5 +1,9 @@
 @extends('backend.layouts.master')
+<<<<<<< HEAD
 @section('title','Kitabbhandaar || Author Create')
+=======
+@section('title','E-SHOP || Brand Create')
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 @section('main-content')
 
 <div class="card">

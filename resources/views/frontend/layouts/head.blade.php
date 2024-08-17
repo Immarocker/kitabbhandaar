@@ -36,7 +36,11 @@
 <link rel="stylesheet" href="{{asset('frontend/css/reset.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/responsive.css')}}">
+<<<<<<< HEAD
 
+=======
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 <style>
     /* Multilevel dropdown */
     .dropdown-submenu {

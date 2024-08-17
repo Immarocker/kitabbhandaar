@@ -75,6 +75,7 @@
                 <div class="col-12">
                     <div class="section-title">
                         <h2>Trending Item</h2>
+<<<<<<< HEAD
                         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -84,6 +85,8 @@
             </ul>
         </div>
     @endif
+=======
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                     </div>
                 </div>
             </div>
@@ -99,7 +102,11 @@
                                 @endphp
                                 @if($categories)
                                 <button class="btn" style="background:black"data-filter="*">
+<<<<<<< HEAD
                                     All Books
+=======
+                                    All Products
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                                 </button>
                                     @foreach($categories as $key=>$cat)
 
@@ -123,15 +130,24 @@
                                                     $photo=explode(',',$product->photo);
                                                 // dd($photo);
                                                 @endphp
+<<<<<<< HEAD
                                                 <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                                 <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                                 
+=======
+                                                <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
+                                                <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                                                 @if($product->stock<=0)
                                                     <span class="out-of-stock">Sale out</span>
                                                 @elseif($product->condition=='new')
                                                     <span class="new">New</span
                                                 @elseif($product->condition=='hot')
+<<<<<<< HEAD
                                                     <span class="hot">Nepali</span>
+=======
+                                                    <span class="hot">Hot</span>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                                                 @else
                                                     <span class="price-dec">{{$product->discount}}% Off</span>
                                                 @endif
@@ -149,13 +165,21 @@
                                             </div>
                                         </div>
                                         <div class="product-content">
+<<<<<<< HEAD
                                         <h3><a href="{{ route('product-detail', $product->slug) }}" style="font-weight: bold;">{{ $product->title }}</a></h3>
+=======
+                                            <h3><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h3>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                                             <div class="product-price">
                                                 @php
                                                     $after_discount=($product->price-($product->price*$product->discount)/100);
                                                 @endphp
                                                 <span>Rs{{number_format($after_discount,2)}}</span>
+<<<<<<< HEAD
                                                 <del style="padding-left:4%;">Rs{{number_format($product->price,2)}}</del>
+=======
+                                                <del style="padding-left:4%;">${{number_format($product->price,2)}}</del>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                                             </div>
                                         </div>
                                     </div>
@@ -219,7 +243,11 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
+<<<<<<< HEAD
                     <h2>Nepali Book</h2>
+=======
+                    <h2>Hot Item</h2>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                 </div>
             </div>
         </div>
@@ -236,10 +264,16 @@
                                         $photo=explode(',',$product->photo);
                                     // dd($photo);
                                     @endphp
+<<<<<<< HEAD
                                     
                                     <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                     <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                     {{-- <span class="out-of-stock">Nepali</span> --}}
+=======
+                                    <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
+                                    <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
+                                    {{-- <span class="out-of-stock">Hot</span> --}}
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                                 </a>
                                 <div class="button-head">
                                     <div class="product-action">
@@ -305,9 +339,14 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12 no-padding">
                                     <div class="content">
+<<<<<<< HEAD
                                         <h4 class="title"><a href="{{route('product-detail', $product->slug)}}">{{$product->title}}</a></h4>
                                         <p class="price with-discount">{{number_format($product->discount,2)}}% off</p>
 
+=======
+                                        <h4 class="title"><a href="#">{{$product->title}}</a></h4>
+                                        <p class="price with-discount">Rs{{number_format($product->discount,2)}}</p>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                                     </div>
                                 </div>
                                 </div>
@@ -391,7 +430,11 @@
                 <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-tag"></i>
+<<<<<<< HEAD
                     <h4>Best Piece</h4>
+=======
+                    <h4>Best Peice</h4>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                     <p>Guaranteed price</p>
                 </div>
                 <!-- End Single Service -->
@@ -420,12 +463,20 @@
                                             <div class="quickview-slider-active">
                                                 @php
                                                     $photo=explode(',',$product->photo);
+<<<<<<< HEAD
                                                     foreach($photo as $p){
                                                     }
                                                 @endphp
                                                 @foreach($photo as $data)
                                                     <div class="single-slider items-align-center">
                                                         <img src="{{$data}}" alt="{{$data}}" height=400px width=400px>
+=======
+                                                // dd($photo);
+                                                @endphp
+                                                @foreach($photo as $data)
+                                                    <div class="single-slider">
+                                                        <img src="{{$data}}" alt="{{$data}}">
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                                                     </div>
                                                 @endforeach
                                             </div>
@@ -473,6 +524,7 @@
                                             <p>{!! html_entity_decode($product->summary) !!}</p>
                                         </div>
                                         @if($product->size)
+<<<<<<< HEAD
                                         <div class="iban">
                                             <div class="row">
                                                 <div class="col-lg-6 col-12">
@@ -488,6 +540,34 @@
                                             </div>
                                         </div>
                                     @endif    
+=======
+                                            <div class="size">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-12">
+                                                        <h5 class="title">Size</h5>
+                                                        <select>
+                                                            @php
+                                                            $sizes=explode(',',$product->size);
+                                                            // dd($sizes);
+                                                            @endphp
+                                                            @foreach($sizes as $size)
+                                                                <option>{{$size}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                    {{-- <div class="col-lg-6 col-12">
+                                                        <h5 class="title">Color</h5>
+                                                        <select>
+                                                            <option selected="selected">orange</option>
+                                                            <option>purple</option>
+                                                            <option>black</option>
+                                                            <option>pink</option>
+                                                        </select>
+                                                    </div> --}}
+                                                </div>
+                                            </div>
+                                        @endif
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                                         <form action="{{route('single-add-to-cart')}}" method="POST" class="mt-4">
                                             @csrf
                                             <div class="quantity">
@@ -529,8 +609,13 @@
 @endsection
 
 @push('styles')
+<<<<<<< HEAD
     
    
+=======
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
     <style>
         /* Banner Sliding */
         #Gslider .carousel-inner {
@@ -566,6 +651,7 @@
         #Gslider .carousel-indicators {
         bottom: 70px;
         }
+<<<<<<< HEAD
 
         .product-gallery {
     display: flex;
@@ -578,6 +664,8 @@
     text-align: center;
     max-width: 100%;
 }
+=======
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
     </style>
 @endpush
 

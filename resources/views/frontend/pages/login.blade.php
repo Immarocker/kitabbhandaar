@@ -27,7 +27,11 @@
                 <div class="col-lg-6 offset-lg-3 col-12">
                     <div class="login-form">
                         <h2>Login</h2>
+<<<<<<< HEAD
                         <p>Please login in order to checkout more quickly</p>
+=======
+                        <p>Please register in order to checkout more quickly</p>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                         <!-- Form -->
                         <form class="form" method="post" action="{{route('login.submit')}}">
                             @csrf
@@ -50,18 +54,32 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
                                 
+=======
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                                 <div class="col-12">
                                     <div class="form-group login-btn">
                                         <button class="btn" type="submit">Login</button>
                                         <a href="{{route('register.form')}}" class="btn">Register</a>
+<<<<<<< HEAD
+=======
+                                        OR
+                                        <a href="{{route('login.redirect','facebook')}}" class="btn btn-facebook"><i class="ti-facebook"></i></a>
+                                        <a href="{{route('login.redirect','github')}}" class="btn btn-github"><i class="ti-github"></i></a>
+                                        <a href="{{route('login.redirect','google')}}" class="btn btn-google"><i class="ti-google"></i></a>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 
                                     </div>
                                     <div class="checkbox">
                                         <label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Remember me</label>
                                     </div>
                                     @if (Route::has('password.request'))
+<<<<<<< HEAD
                                         <a class="lost-pass" href="{{ route('password.update') }}">
+=======
+                                        <a class="lost-pass" href="{{ route('password.reset') }}">
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                                             Lost your password?
                                         </a>
                                     @endif

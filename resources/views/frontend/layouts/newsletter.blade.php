@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 <!-- Start Shop Newsletter  -->
 <section class="shop-newsletter section">
     <div class="container">
@@ -8,6 +12,7 @@
                     <div class="inner">
                         <h4>Newsletter</h4>
                         <p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
+<<<<<<< HEAD
 
                         <!-- Display Flash Messages -->
                         @if (session('success'))
@@ -36,6 +41,11 @@
                         <form action="{{ route('subscribe') }}" method="post" class="newsletter-inner">
                             @csrf
                             <input name="subscriber_email" placeholder="Your email address" type="email" required>
+=======
+                        <form action="{{route('subscribe')}}" method="post" class="newsletter-inner">
+                            @csrf
+                            <input name="email" placeholder="Your email address" required="" type="email">
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                             <button class="btn" type="submit">Subscribe</button>
                         </form>
                     </div>

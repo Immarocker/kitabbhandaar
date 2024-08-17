@@ -5,6 +5,7 @@
 <div class="card">
     <h5 class="card-header">Add Book</h5>
     <div class="card-body">
+<<<<<<< HEAD
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -14,6 +15,8 @@
             </ul>
         </div>
     @endif
+=======
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
       <form method="post" action="{{route('product.store')}}">
         {{csrf_field()}}
         <div class="form-group">
@@ -83,8 +86,22 @@
           @enderror
         </div>
         <div class="form-group">
+<<<<<<< HEAD
           <label for="size">IBAN</label>
           <input type="text" name="size" class="form-control" multiple data-live-search="true" placeholder="IBAN Number">
+=======
+          <label for="size">Language</label>
+          <select name="size[]" class="form-control selectpicker" data-live-search="true">
+              <option value="">--Select a Language--</option>
+              <option value="Nepali">Nepali</option>
+              <option value="English">English</option>
+              <option value="Hindi">Hindi</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="pages">Pages</label>
+          <input type="number" name="pages" class="form-control" placeholder="Enter the number of pages">
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         </div>
 
         <div class="form-group">
@@ -92,7 +109,11 @@
           {{-- {{$brands}} --}}
 
           <select name="brand_id" class="form-control">
+<<<<<<< HEAD
               <option value="">--Add Author--</option>
+=======
+              <option value="">--Select an Author--</option>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
              @foreach($brands as $brand)
               <option value="{{$brand->id}}">{{$brand->title}}</option>
              @endforeach
@@ -103,9 +124,15 @@
           <label for="condition">Condition</label>
           <select name="condition" class="form-control">
               <option value="">--Select Condition--</option>
+<<<<<<< HEAD
               <option value="default">Default</option>
               <option value="new">New</option>
               <option value="Nepali">Nepali</option>
+=======
+              <option value="default">Best Seller</option>
+              <option value="new">New Arrivals</option>
+              <option value="hot">Nepali Books</option>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
           </select>
         </div>
 

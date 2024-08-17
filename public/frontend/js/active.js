@@ -218,7 +218,11 @@ window.onload = () => {
 		/*====================================
 		  Cart Plus Minus Button
 		======================================*/
+<<<<<<< HEAD
 		var CartPlusMinus = ra('.cart-plus-minus');
+=======
+		var CartPlusMinus = $('.cart-plus-minus');
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 		CartPlusMinus.prepend('<div class="dec qtybutton">-</div>');
 		CartPlusMinus.append('<div class="inc qtybutton">+</div>');
 		$(".qtybutton").on("click", function() {

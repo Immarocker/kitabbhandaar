@@ -1,6 +1,10 @@
 @extends('frontend.layouts.master')
 
+<<<<<<< HEAD
 @section('title','Kitabbhandaar|| Blog Detail page')
+=======
+@section('title','E-TECH || Blog Detail page')
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 
 @section('main-content')
     <!-- Breadcrumbs -->
@@ -202,7 +206,11 @@
     <!--/ End Blog Single -->
 @endsection
 @push('styles')
+<<<<<<< HEAD
 
+=======
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 @endpush
 @push('scripts')
 <script>

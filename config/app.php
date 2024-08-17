@@ -161,7 +161,10 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+<<<<<<< HEAD
         Spatie\Newsletter\NewsletterServiceProvider::class,
+=======
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 
         // unisharp
         UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
@@ -169,7 +172,10 @@ return [
         Barryvdh\DomPDF\ServiceProvider::class,
         Srmklive\PayPal\Providers\PayPalServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+<<<<<<< HEAD
         Spatie\Newsletter\NewsletterServiceProvider::class,
+=======
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         /*
          * Package Service Providers...
          */
@@ -182,7 +188,10 @@ return [
         App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+<<<<<<< HEAD
         Spatie\Newsletter\NewsletterServiceProvider::class,
+=======
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 
     ],
 
@@ -240,7 +249,11 @@ return [
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'PayPal' => Srmklive\PayPal\Facades\PayPal::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+<<<<<<< HEAD
         'Newsletter' => Spatie\Newsletter\NewsletterFacade::class,
+=======
+
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
     ],
 
 ];

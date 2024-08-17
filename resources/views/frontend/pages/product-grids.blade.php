@@ -118,7 +118,11 @@
                                             $brands=DB::table('brands')->orderBy('title','ASC')->where('status','active')->get();
                                         @endphp
                                         @foreach($brands as $brand)
+<<<<<<< HEAD
                                         <li><a href="{{ route('product-brand', $brand->slug) }}">{{ $brand->title }}</a></li>
+=======
+                                            <li><a href="{{route('product-brand',$brand->slug)}}">{{$brand->title}}</a></li>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                                         @endforeach
                                     </ul>
                                 </div>
@@ -148,6 +152,10 @@
                                                 <option value="title" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='title') selected @endif>Name</option>
                                                 <option value="price" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='price') selected @endif>Price</option>
                                                 <option value="category" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='category') selected @endif>Category</option>
+<<<<<<< HEAD
+=======
+                                                <option value="brand" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='brand') selected @endif>Author</option>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                                             </select>
                                         </div>
                                     </div>
@@ -198,7 +206,11 @@
                                     </div>
                                 @endforeach
                             @else
+<<<<<<< HEAD
                                     <h4 class="text-warning" style="margin:100px auto;">There are no books.</h4>
+=======
+                                    <h4 class="text-warning" style="margin:100px auto;">There are no products.</h4>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                             @endif
 
 
@@ -288,6 +300,7 @@
                                             <div class="quickview-peragraph">
                                                 <p>{!! html_entity_decode($product->summary) !!}</p>
                                             </div>
+<<<<<<< HEAD
                                             <div class="iban">
                                             <div class="row">
                                                 <div class="col-lg-6 col-12">
@@ -299,6 +312,34 @@
                                                             <span style="color: orange;">IBAN-</span>{{$iban}}
                                                         </p>
                                                     @endforeach
+=======
+                                            @if($product->size)
+                                                <div class="size">
+                                                    <h4>Size</h4>
+                                                    <ul>
+                                                        @php
+                                                            $sizes=explode(',',$product->size);
+                                                            // dd($sizes);
+                                                        @endphp
+                                                        @foreach($sizes as $size)
+                                                        <li><a href="#" class="one">{{$size}}</a></li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            @endif
+                                            <div class="size">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-12">
+                                                        <h5 class="title">Size</h5>
+                                                        <select>
+                                                            @php
+                                                            $sizes=explode(',',$product->size);
+                                                            // dd($sizes);
+                                                            @endphp
+                                                            @foreach($sizes as $size)
+                                                                <option>{{$size}}</option>
+                                                            @endforeach
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                                                         </select>
                                                     </div>
                                                     {{-- <div class="col-lg-6 col-12">

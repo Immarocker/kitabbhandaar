@@ -2,7 +2,11 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
   <title>Kitabbhandaar || Login Page</title>
+=======
+  <title>E-SHOP || Login Page</title>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
   @include('backend.layouts.head')
   <style>
     .full-height {
@@ -73,7 +77,12 @@
                   <hr>
                   <div class="text-center">
                     @if (Route::has('password.request'))
+<<<<<<< HEAD
                     <a class="btn btn-link small" href="{{ route('password.request') }}">                     
+=======
+                    <a class="btn btn-link small" href="{{ route('password.request') }}">
+                      {{ __('Forgot Your Password?') }}
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                     </a>
                     @endif
                   </div>

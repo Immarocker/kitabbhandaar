@@ -12,7 +12,11 @@
     use App\Http\Controllers\ProductReviewController;
     use App\Http\Controllers\PostCommentController;
     use App\Http\Controllers\CouponController;
+<<<<<<< HEAD
     use App\Http\Controllers\KhaltiController;
+=======
+    use App\Http\Controllers\PayPalController;
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
     use App\Http\Controllers\NotificationController;
     use App\Http\Controllers\HomeController;
     use \UniSharp\LaravelFilemanager\Lfm;
@@ -50,12 +54,15 @@
     Route::post('user/register', [FrontendController::class, 'registerSubmit'])->name('register.submit');
 // Reset password
     Route::post('password-reset', [FrontendController::class, 'showResetForm'])->name('password.reset');
+<<<<<<< HEAD
     Route::get('password-reset', [FrontendController::class, 'showResetForm'])->name('password.reset');
     Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
     Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
     Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
     Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
 
+=======
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 // Socialite
     Route::get('login/{provider}/', [LoginController::class, 'redirect'])->name('login.redirect');
     Route::get('login/{provider}/callback/', [LoginController::class, 'Callback'])->name('login.callback');
@@ -67,11 +74,19 @@
     Route::get('/about-us', [FrontendController::class, 'aboutUs'])->name('about-us');
     Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
     Route::post('/contact/message', [MessageController::class, 'store'])->name('contact.store');
+<<<<<<< HEAD
     Route::get('book-detail/{slug}', [FrontendController::class, 'productDetail'])->name('product-detail');
     Route::post('/book/search', [FrontendController::class, 'productSearch'])->name('product.search');
     Route::get('/book-cat/{slug}', [FrontendController::class, 'productCat'])->name('product-cat');
     Route::get('/book-sub-cat/{slug}/{sub_slug}', [FrontendController::class, 'productSubCat'])->name('product-sub-cat');
     Route::get('/book-author/{slug}', [FrontendController::class, 'productBrand'])->name('product-brand');
+=======
+    Route::get('product-detail/{slug}', [FrontendController::class, 'productDetail'])->name('product-detail');
+    Route::post('/product/search', [FrontendController::class, 'productSearch'])->name('product.search');
+    Route::get('/product-cat/{slug}', [FrontendController::class, 'productCat'])->name('product-cat');
+    Route::get('/product-sub-cat/{slug}/{sub_slug}', [FrontendController::class, 'productSubCat'])->name('product-sub-cat');
+    Route::get('/product-brand/{slug}', [FrontendController::class, 'productBrand'])->name('product-brand');
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 // Cart section
     Route::get('/add-to-cart/{slug}', [CartController::class, 'addToCart'])->name('add-to-cart')->middleware('user');
     Route::post('/add-to-cart', [CartController::class, 'singleAddToCart'])->name('single-add-to-cart')->middleware('user');
@@ -92,12 +107,21 @@
     Route::get('order/pdf/{id}', [OrderController::class, 'pdf'])->name('order.pdf');
     Route::get('/income', [OrderController::class, 'incomeChart'])->name('product.order.income');
 // Route::get('/user/chart',[AdminController::class, 'userPieChart'])->name('user.piechart');
+<<<<<<< HEAD
     Route::get('/book-grids', [FrontendController::class, 'productGrids'])->name('product-grids');
     Route::get('/book-lists', [FrontendController::class, 'productLists'])->name('product-lists');
     Route::match(['get', 'post'], '/filter', [FrontendController::class, 'productFilter'])->name('shop.filter');
 // Order Track
     Route::get('/book/track', [OrderController::class, 'orderTrack'])->name('order.track');
     Route::post('book/track/order', [OrderController::class, 'productTrackOrder'])->name('product.track.order');
+=======
+    Route::get('/product-grids', [FrontendController::class, 'productGrids'])->name('product-grids');
+    Route::get('/product-lists', [FrontendController::class, 'productLists'])->name('product-lists');
+    Route::match(['get', 'post'], '/filter', [FrontendController::class, 'productFilter'])->name('shop.filter');
+// Order Track
+    Route::get('/product/track', [OrderController::class, 'orderTrack'])->name('order.track');
+    Route::post('product/track/order', [OrderController::class, 'productTrackOrder'])->name('product.track.order');
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 // Blog
     Route::get('/blog', [FrontendController::class, 'blog'])->name('blog');
     Route::get('/blog-detail/{slug}', [FrontendController::class, 'blogDetail'])->name('blog.detail');
@@ -108,7 +132,10 @@
 
 // NewsLetter
     Route::post('/subscribe', [FrontendController::class, 'subscribe'])->name('subscribe');
+<<<<<<< HEAD
    
+=======
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 
 // Product Review
     Route::resource('/review', 'ProductReviewController');
@@ -119,6 +146,7 @@
     Route::resource('/comment', 'PostCommentController');
 // Coupon
     Route::post('/coupon-store', [CouponController::class, 'couponStore'])->name('coupon-store');
+<<<<<<< HEAD
 
 // Payment
 
@@ -126,6 +154,13 @@ Route::post('/khalti/verifyPayment', [KhaltiController::class, 'success'])->name
 Route::post('/khalti/storePayment', [KhaltiController::class, 'storePayment'])->name('khalti.storePayment');
 Route::get('/payment/success', [KhaltiController::class, 'success'])->name('payment.success');
 Route::get('/payment/cancel', [KhaltiController::class, 'cancel'])->name('payment.cancel');
+=======
+// Payment
+    Route::get('payment', [PayPalController::class, 'payment'])->name('payment');
+    Route::get('cancel', [PayPalController::class, 'cancel'])->name('payment.cancel');
+    Route::get('payment/success', [PayPalController::class, 'success'])->name('payment.success');
+
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 
 // Backend section start
 
@@ -173,10 +208,17 @@ Route::get('/payment/cancel', [KhaltiController::class, 'cancel'])->name('paymen
         Route::get('/notification/{id}', [NotificationController::class, 'show'])->name('admin.notification');
         Route::get('/notifications', [NotificationController::class, 'index'])->name('all.notification');
         Route::delete('/notification/{id}', [NotificationController::class, 'delete'])->name('notification.delete');
+<<<<<<< HEAD
 
         Route::get('change-password', [AdminController::class, 'changePassword'])->name('change.password.form');
         Route::post('change-password', [AdminController::class, 'changPasswordStore'])->name('change.password');
         });
+=======
+        // Password Change
+        Route::get('change-password', [AdminController::class, 'changePassword'])->name('change.password.form');
+        Route::post('change-password', [AdminController::class, 'changPasswordStore'])->name('change.password');
+    });
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 
 
 // User section start
@@ -201,10 +243,17 @@ Route::get('/payment/cancel', [KhaltiController::class, 'cancel'])->name('paymen
         Route::get('user-post/comment/edit/{id}', [HomeController::class, 'userCommentEdit'])->name('user.post-comment.edit');
         Route::patch('user-post/comment/udpate/{id}', [HomeController::class, 'userCommentUpdate'])->name('user.post-comment.update');
 
+<<<<<<< HEAD
         Route::group(['as' => 'user.'], function () {
             Route::get('change-password', [HomeController::class, 'changePassword'])->name('change.password.form');
             Route::post('change-password', [HomeController::class, 'changPasswordStore'])->name('change.password');
         });
+=======
+        // Password Change
+        Route::get('change-password', [HomeController::class, 'changePassword'])->name('user.change.password.form');
+        Route::post('change-password', [HomeController::class, 'changPasswordStore'])->name('change.password');
+
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
     });
 
     Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {

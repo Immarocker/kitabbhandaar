@@ -41,7 +41,11 @@ class WishlistController extends Controller
             if ($wishlist->product->stock < $wishlist->quantity || $wishlist->product->stock <= 0) return back()->with('error','Stock not sufficient!.');
             $wishlist->save();
         }
+<<<<<<< HEAD
         request()->session()->flash('success','Book successfully added to wishlist');
+=======
+        request()->session()->flash('success','Product successfully added to wishlist');
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         return back();       
     }  
     

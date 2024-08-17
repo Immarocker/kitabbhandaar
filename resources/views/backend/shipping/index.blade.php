@@ -39,7 +39,11 @@
                 <tr>
                     <td>{{$shipping->id}}</td>
                     <td>{{$shipping->type}}</td>
+<<<<<<< HEAD
                     <td>Rs {{$shipping->price}}</td>
+=======
+                    <td>${{$shipping->price}}</td>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                     <td>
                         @if($shipping->status=='active')
                             <span class="badge badge-success">{{$shipping->status}}</span>

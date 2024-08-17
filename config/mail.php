@@ -84,8 +84,13 @@ return [
     */
 
     'from' => [
+<<<<<<< HEAD
         'address' => env('MAIL_FROM_ADDRESS', 'kitabbhandaarr@gmail.com'),
         'name' => env('MAIL_FROM_NAME', 'Kitab Bhandaar'),
+=======
+        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'name' => env('MAIL_FROM_NAME', 'Example'),
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
     ],
 
     /*

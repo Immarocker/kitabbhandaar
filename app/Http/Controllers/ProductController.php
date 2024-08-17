@@ -57,7 +57,11 @@ class ProductController extends Controller
             'child_cat_id'=>'nullable|exists:categories,id',
             'is_featured'=>'sometimes|in:1',
             'status'=>'required|in:active,inactive',
+<<<<<<< HEAD
             'condition'=>'in:default,new,hot',
+=======
+            'condition'=>'required|in:default,new,hot',
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
             'price'=>'required|numeric',
             'discount'=>'nullable|numeric'
         ]);
@@ -70,12 +74,26 @@ class ProductController extends Controller
         }
         $data['slug']=$slug;
         $data['is_featured']=$request->input('is_featured',0);
+<<<<<<< HEAD
 
+=======
+        $size=$request->input('size');
+        if($size){
+            $data['size']=implode(',',$size);
+        }
+        else{
+            $data['size']='';
+        }
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         // return $size;
         // return $data;
         $status=Product::create($data);
         if($status){
+<<<<<<< HEAD
             request()->session()->flash('success','Book Successfully added');
+=======
+            request()->session()->flash('success','Product Successfully added');
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         }
         else{
             request()->session()->flash('error','Please try again!!');
@@ -122,9 +140,12 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         $product=Product::findOrFail($id);
         $this->validate($request,[
             'title'=>'string|required',
@@ -138,11 +159,16 @@ class ProductController extends Controller
             'is_featured'=>'sometimes|in:1',
             'brand_id'=>'nullable|exists:brands,id',
             'status'=>'required|in:active,inactive',
+<<<<<<< HEAD
             'condition'=>'in:default,new,hot',
+=======
+            'condition'=>'required|in:default,new,hot',
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
             'price'=>'required|numeric',
             'discount'=>'nullable|numeric'
         ]);
 
+<<<<<<< HEAD
         $data = $request->all();
         $data['is_featured'] = $request->input('is_featured', 0);
         $status = $product->fill($data)->save();
@@ -154,6 +180,27 @@ class ProductController extends Controller
         return redirect()->route('product.index');
     }
     
+=======
+        $data=$request->all();
+        $data['is_featured']=$request->input('is_featured',0);
+        $size=$request->input('size');
+        if($size){
+            $data['size']=implode(',',$size);
+        }
+        else{
+            $data['size']='';
+        }
+        // return $data;
+        $status=$product->fill($data)->save();
+        if($status){
+            request()->session()->flash('success','Product Successfully updated');
+        }
+        else{
+            request()->session()->flash('error','Please try again!!');
+        }
+        return redirect()->route('product.index');
+    }
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 
     /**
      * Remove the specified resource from storage.
@@ -167,10 +214,17 @@ class ProductController extends Controller
         $status=$product->delete();
         
         if($status){
+<<<<<<< HEAD
             request()->session()->flash('success','Book successfully deleted');
         }
         else{
             request()->session()->flash('error','Error while deleting book');
+=======
+            request()->session()->flash('success','Product successfully deleted');
+        }
+        else{
+            request()->session()->flash('error','Error while deleting product');
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         }
         return redirect()->route('product.index');
     }

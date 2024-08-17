@@ -7,7 +7,11 @@
                 <div class="card-header">Change Password</div>
    
                 <div class="card-body">
+<<<<<<< HEAD
                 <form method="POST" action="{{ url('admin/change-password') }}">
+=======
+                    <form method="POST" action="{{ route('change.password') }}">
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                         @csrf 
    
                          @foreach ($errors->all() as $error)
@@ -51,4 +55,8 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 @endsection
+=======
+@endsection
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7

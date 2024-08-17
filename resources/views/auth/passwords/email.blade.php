@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
     @include('backend.layouts.head')
     <style>
         .full-height {
@@ -35,30 +36,47 @@
             height: 100%;
         }
     </style>
+=======
+@include('backend.layouts.head')
+
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 </head>
 
 <body class="bg-gradient-primary">
 
+<<<<<<< HEAD
   <div class="container full-height">
+=======
+  <div class="container">
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 
     <!-- Outer Row -->
     <div class="row justify-content-center">
 
+<<<<<<< HEAD
       <div class="col-12 mt-5">
+=======
+      <div class="col-xl-10 col-lg-12 col-md-9">
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 
         <div class="card o-hidden border-0 shadow-lg my-5">
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
+<<<<<<< HEAD
               <div class="col-lg-6 d-none d-lg-block text-center">
                 <img src="/storage/photos/1/forget.jpeg" alt="Book Image" class="img-fluid">
               </div>
+=======
+              <div class="col-lg-6 d-none d-lg-block bg-password-image"></div>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-2">Forgot Your Password?</h1>
                     <p class="mb-4">We get it, stuff happens. Just enter your email address below and we'll send you a link to reset your password!</p>
                   </div>
+<<<<<<< HEAD
                   @if (session('status'))
                     <div class="alert alert-success" role="alert">
                       {{ session('status') }}
@@ -73,6 +91,22 @@
                           <strong>{{ $message }}</strong>
                         </span>
                       @enderror
+=======
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                  <form class="user"  method="POST" action="{{ route('password.email') }}">
+                    @csrf
+                    <div class="form-group">
+                      <input type="email" class="form-control form-control-user @error('email') is-invalid @enderror" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                     </div>
                     <button type="submit" class="btn btn-primary btn-user btn-block">
                       Reset Password
@@ -80,7 +114,11 @@
                   </form>
                   <hr>
                   <div class="text-center">
+<<<<<<< HEAD
                     <a class="small" href="{{ route('login.form') }}">Already have an account? Login!</a>
+=======
+                    <a class="small" href="{{route('login')}}">Already have an account? Login!</a>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                   </div>
                 </div>
               </div>
@@ -96,4 +134,8 @@
 
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7

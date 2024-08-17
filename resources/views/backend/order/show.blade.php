@@ -29,7 +29,11 @@
             <td>{{$order->first_name}} {{$order->last_name}}</td>
             <td>{{$order->email}}</td>
             <td>{{$order->quantity}}</td>
+<<<<<<< HEAD
             <td>Rs {{ $order->shipping ? $order->shipping->price : 'N/A' }}</td>
+=======
+            <td>${{$order->shipping->price}}</td>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
             <td>${{number_format($order->total_amount,2)}}</td>
             <td>
                 @if($order->status=='new')
@@ -80,7 +84,11 @@
                     </tr>
                     <tr>
                         <td>Shipping Charge</td>
+<<<<<<< HEAD
                         <td>Rs {{ $order->shipping ? $order->shipping->price : 'N/A' }}</td>
+=======
+                        <td> : $ {{$order->shipping->price}}</td>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                     </tr>
                     <tr>
                       <td>Coupon</td>
@@ -92,7 +100,11 @@
                     </tr>
                     <tr>
                         <td>Payment Method</td>
+<<<<<<< HEAD
                         <td> : @if($order->payment_method=='cod') Cash on Delivery @else Khalti @endif</td>
+=======
+                        <td> : @if($order->payment_method=='cod') Cash on Delivery @else Paypal @endif</td>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                     </tr>
                     <tr>
                         <td>Payment Status</td>

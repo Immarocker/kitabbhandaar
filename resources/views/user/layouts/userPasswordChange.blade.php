@@ -9,6 +9,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('change.password') }}">
                         @csrf 
+<<<<<<< HEAD
                         
                         @foreach ($errors->all() as $error)
                             <p class="text-danger">{{ $error }}</p>
@@ -19,11 +20,27 @@
   
                             <div class="col-md-6">
                                 <input id="current_password" type="password" class="form-control" name="current_password" autocomplete="current-password">
+=======
+   
+                         @foreach ($errors->all() as $error)
+                            <p class="text-danger">{{ $error }}</p>
+                         @endforeach 
+  
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">Current Password</label>
+  
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" name="current_password" autocomplete="current-password">
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                             </div>
                         </div>
   
                         <div class="form-group row">
+<<<<<<< HEAD
                             <label for="new_password" class="col-md-4 col-form-label text-md-right">New Password</label>
+=======
+                            <label for="password" class="col-md-4 col-form-label text-md-right">New Password</label>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
   
                             <div class="col-md-6">
                                 <input id="new_password" type="password" class="form-control" name="new_password" autocomplete="current-password">
@@ -31,7 +48,11 @@
                         </div>
   
                         <div class="form-group row">
+<<<<<<< HEAD
                             <label for="new_confirm_password" class="col-md-4 col-form-label text-md-right">New Confirm Password</label>
+=======
+                            <label for="password" class="col-md-4 col-form-label text-md-right">New Confirm Password</label>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
     
                             <div class="col-md-6">
                                 <input id="new_confirm_password" type="password" class="form-control" name="new_confirm_password" autocomplete="current-password">

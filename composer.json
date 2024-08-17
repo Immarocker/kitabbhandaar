@@ -7,6 +7,7 @@
     "require": {
         "php": "^8.1",
         "barryvdh/laravel-dompdf": "^2.0",
+<<<<<<< HEAD
         "drewm/mailchimp-api": "^2.5",
         "guzzlehttp/guzzle": "^7.2",
         "illuminate/mail": "*",
@@ -19,6 +20,16 @@
         "mailchimp/transactional": "^1.0",
         "pusher/pusher-php-server": "^7.2",
         "spatie/laravel-newsletter": "^5.2",
+=======
+        "guzzlehttp/guzzle": "^7.2",
+        "laravel/framework": "^10.0",
+        "laravel/sanctum": "^3.2",
+        "laravel/socialite": "^5.6",
+        "laravel/tinker": "^2.8",
+        "laravel/ui": "^4.2",
+        "pusher/pusher-php-server": "^7.2",
+        "spatie/laravel-newsletter": "^5.1",
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         "srmklive/paypal": "^3.0",
         "unisharp/laravel-filemanager": "^2.6"
     },

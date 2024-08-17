@@ -4,7 +4,11 @@
 
 @section('main-content')
 <div class="card">
+<<<<<<< HEAD
 <h5 class="card-header">Order     
+=======
+<h5 class="card-header">Order       <a href="{{route('order.pdf',$order->id)}}" class=" btn btn-sm btn-primary shadow-sm float-right"><i class="fas fa-download fa-sm text-white-50"></i> Generate PDF</a>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
   </h5>
   <div class="card-body">
     @if($order)
@@ -29,8 +33,13 @@
             <td>{{$order->first_name}} {{$order->last_name}}</td>
             <td>{{$order->email}}</td>
             <td>{{$order->quantity}}</td>
+<<<<<<< HEAD
             <td>Rs {{ optional($order->shipping)->price ?? 'N/A' }}</td>
             <td>Rs {{number_format($order->total_amount,2)}}</td>
+=======
+            <td>${{$order->shipping->price}}</td>
+            <td>${{number_format($order->total_amount,2)}}</td>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
             <td>
                 @if($order->status=='new')
                   <span class="badge badge-primary">{{$order->status}}</span>
@@ -82,6 +91,7 @@
                           $shipping_charge=DB::table('shippings')->where('id',$order->shipping_id)->pluck('price');
                       @endphp
                         <td>Shipping Charge</td>
+<<<<<<< HEAD
                         <td>Rs {{ optional($order->shipping)->price ?? 'N/A' }}</td>
                     </tr>
                     <tr>
@@ -91,6 +101,17 @@
                     <tr>
                       <td>Payment Method</td>
                       <td> : @if($order->payment_method=='cod') Cash on Delivery @else khalti @endif</td>
+=======
+                        <td> :${{$order->shipping->price}}</td>
+                    </tr>
+                    <tr>
+                        <td>Total Amount</td>
+                        <td> : $ {{number_format($order->total_amount,2)}}</td>
+                    </tr>
+                    <tr>
+                      <td>Payment Method</td>
+                      <td> : @if($order->payment_method=='cod') Cash on Delivery @else Paypal @endif</td>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                     </tr>
                     <tr>
                         <td>Payment Status</td>

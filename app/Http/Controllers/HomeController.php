@@ -209,6 +209,7 @@ class HomeController extends Controller
         }
 
     }
+<<<<<<< HEAD
     public function changePassword()
     {
         return view('user.layouts.userPasswordChange');
@@ -227,5 +228,24 @@ class HomeController extends Controller
 
     return redirect()->route('user.change.password.form')->with('success', 'Password successfully changed');
 }
+=======
+
+    public function changePassword(){
+        return view('user.layouts.userPasswordChange');
+    }
+    public function changPasswordStore(Request $request)
+    {
+        $request->validate([
+            'current_password' => ['required', new MatchOldPassword],
+            'new_password' => ['required'],
+            'new_confirm_password' => ['same:new_password'],
+        ]);
+   
+        User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
+   
+        return redirect()->route('user')->with('success','Password successfully changed');
+    }
+
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
     
 }

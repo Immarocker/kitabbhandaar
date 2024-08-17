@@ -44,7 +44,11 @@
                 <tr>
                     <td>{{$review->id}}</td>
                     <td>{{$review->user_info['name']}}</td>
+<<<<<<< HEAD
                     <td>{{ $review && $review->product ? $review->product->title : 'N/A' }}</td>
+=======
+                    <td>{{$review->product->title}}</td>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                     <td>{{$review->review}}</td>
                     <td>
                      <ul style="list-style:none" class="d-flex">

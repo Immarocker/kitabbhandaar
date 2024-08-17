@@ -9,15 +9,23 @@
 						<!-- Single Widget -->
 						<div class="single-footer about">
 							<div class="logo">
+<<<<<<< HEAD
 							<a href="{{ route('home') }}">
 							<img src="{{ asset('backend/img/logo2.png') }}" alt="#">
 							</a>
+=======
+								<a href="index.html"><img src="{{asset('backend/img/logo2.png')}}" alt="#"></a>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 							</div>
 							@php
 								$settings=DB::table('settings')->get();
 							@endphp
 							<p class="text">@foreach($settings as $data) {{$data->short_des}} @endforeach</p>
+<<<<<<< HEAD
 							<p class="call">Got Question? Call us 24/7<span><a href="tel:9813477816">@foreach($settings as $data) {{$data->phone}} @endforeach</a></span></p>
+=======
+							<p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">@foreach($settings as $data) {{$data->phone}} @endforeach</a></span></p>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 						</div>
 						<!-- End Single Widget -->
 					</div>
@@ -76,7 +84,11 @@
 					<div class="row">
 						<div class="col-lg-6 col-12">
 							<div class="left">
+<<<<<<< HEAD
 								<p>Copyright © {{date('Y')}} <a href="https://github.com/Immarocker" target="_blank">Subha Sitaula</a>  -  All Rights Reserved.</p>
+=======
+								<p>Copyright © {{date('Y')}} <a href="https://github.com/Prajwal100" target="_blank">Prajwal Rai</a>  -  All Rights Reserved.</p>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 							</div>
 						</div>
 						<div class="col-lg-6 col-12">

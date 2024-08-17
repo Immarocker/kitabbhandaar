@@ -6,7 +6,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+<<<<<<< HEAD
     <title>Kitabbhandaar || DASHBOARD</title>
+=======
+    <title>E-SHOP || DASHBOARD</title>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
   
     <!-- Custom fonts for this template-->
     <link href="{{asset('backend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">

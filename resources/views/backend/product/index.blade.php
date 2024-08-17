@@ -9,8 +9,13 @@
          </div>
      </div>
     <div class="card-header py-3">
+<<<<<<< HEAD
       <h6 class="m-0 font-weight-bold text-primary float-left">Book Lists</h6>
       <a href="{{route('product.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Book</a>
+=======
+      <h6 class="m-0 font-weight-bold text-primary float-left">Product Lists</h6>
+      <a href="{{route('product.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Product</a>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -24,7 +29,11 @@
               <th>Is Featured</th>
               <th>Price</th>
               <th>Discount</th>
+<<<<<<< HEAD
               <th>IBAN  </th>
+=======
+              <th>Language</th>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
               <th>Condition</th>
               <th>Author</th>
               <th>Stock</th>
@@ -41,7 +50,11 @@
               <th>Is Featured</th>
               <th>Price</th>
               <th>Discount</th>
+<<<<<<< HEAD
               <th>IBAN  </th>
+=======
+              <th>Language</th>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
               <th>Condition</th>
               <th>Author</th>
               <th>Stock</th>
@@ -61,7 +74,11 @@
                 <tr>
                     <td>{{$product->id}}</td>
                     <td>{{$product->title}}</td>
+<<<<<<< HEAD
                     <td>{{ $product->cat_info['title'] ?? 'No Title Available' }}</td>
+=======
+                    <td>{{$product->cat_info['title']}}
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                       <sub>
                           {{$product->sub_cat_info->title ?? ''}}
                       </sub>
@@ -71,7 +88,11 @@
                     <td>  {{$product->discount}}% OFF</td>
                     <td>{{$product->size}}</td>
                     <td>{{$product->condition}}</td>
+<<<<<<< HEAD
                     <td>{{ ucfirst(optional($product->brand)->title) }}</td>
+=======
+                    <td>{{ ucfirst($product->brand->title ?? '') }}</td>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                     <td>
                       @if($product->stock>0)
                       <span class="badge badge-primary">{{$product->stock}}</span>
@@ -111,7 +132,11 @@
         </table>
         <span style="float:right">{{$products->links()}}</span>
         @else
+<<<<<<< HEAD
           <h6 class="text-center">No Books found!!! Please create Book</h6>
+=======
+          <h6 class="text-center">No Products found!!! Please create Product</h6>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         @endif
       </div>
     </div>

@@ -34,7 +34,11 @@
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2">
+<<<<<<< HEAD
                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Books</div>
+=======
+                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Products</div>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                 <div class="h5 mb-0 font-weight-bold text-gray-800">{{\App\Models\Product::countActiveProduct()}}</div>
               </div>
               <div class="col-auto">

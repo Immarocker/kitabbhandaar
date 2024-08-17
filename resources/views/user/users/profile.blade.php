@@ -71,7 +71,13 @@
                       <div class="form-group">
                           <label for="role" class="col-form-label">Role</label>
                           <select name="role" class="form-control">
+<<<<<<< HEAD
                             <option value="user" selected>User</option>
+=======
+                              <option value="">-----Select Role-----</option>
+                                  <option value="admin" {{(($profile->role=='admin')? 'selected' : '')}}>Admin</option>
+                                  <option value="user" {{(($profile->role=='user')? 'selected' : '')}}>User</option>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                           </select>
                         @error('role')
                         <span class="text-danger">{{$message}}</span>

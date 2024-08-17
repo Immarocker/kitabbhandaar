@@ -129,7 +129,11 @@
               @endforeach
             </span></td>
           <td>x{{$cart->quantity}}</td>
+<<<<<<< HEAD
           <td><span>Rs {{number_format($cart->price,2)}}</span></td>
+=======
+          <td><span>${{number_format($cart->price,2)}}</span></td>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         </tr>
       @endforeach
       </tbody>
@@ -137,7 +141,11 @@
         <tr>
           <th scope="col" class="empty"></th>
           <th scope="col" class="text-right">Subtotal:</th>
+<<<<<<< HEAD
           <th scope="col"> <span>Rs {{number_format($order->sub_total,2)}}</span></th>
+=======
+          <th scope="col"> <span>${{number_format($order->sub_total,2)}}</span></th>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         </tr>
       {{-- @if(!empty($order->coupon))
         <tr>
@@ -149,14 +157,22 @@
         <tr>
           <th scope="col" class="empty"></th>
           <th scope="col" class="text-right ">Shipping:</th>
+<<<<<<< HEAD
           <th><span>Rs{{number_format($order->delivery_charge,2)}}</span></th>
+=======
+          <th><span>${{number_format($order->delivery_charge,2)}}</span></th>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         </tr>
         <tr>
           <th scope="col" class="empty"></th>
           <th scope="col" class="text-right">Total:</th>
           <th>
             <span>
+<<<<<<< HEAD
                 Rs {{number_format($order->total_amount,2)}}
+=======
+                ${{number_format($order->total_amount,2)}}
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
             </span>
           </th>
         </tr>

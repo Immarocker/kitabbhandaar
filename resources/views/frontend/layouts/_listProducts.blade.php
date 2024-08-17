@@ -21,9 +21,15 @@
                         </div>
                     </div>
                     <div class="product-content">
+<<<<<<< HEAD
                         <h3><a href="product-details.html">Books</a></h3>
                         <div class="product-price">
                             <span>Rs 2900</span>
+=======
+                        <h3><a href="product-details.html">Women Hot Collection</a></h3>
+                        <div class="product-price">
+                            <span>$29.00</span>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                         </div>
                     </div>
                 </div>
@@ -1086,10 +1092,17 @@
                         </div>
                     </div>
                     <div class="product-content">
+<<<<<<< HEAD
                         <h3><a href="product-details.html">Nepali Books</a></h3>
                         <div class="product-price">
                             <span class="old">Rs 1000</span>
                             <span>Rs 5000</span>
+=======
+                        <h3><a href="product-details.html">Black Sunglass For Women</a></h3>
+                        <div class="product-price">
+                            <span class="old">$60.00</span>
+                            <span>$50.00</span>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
                         </div>
                     </div>
                 </div>

@@ -3,7 +3,11 @@
 @section('main-content')
 
 <div class="card">
+<<<<<<< HEAD
     <h5 class="card-header">Edit Book</h5>
+=======
+    <h5 class="card-header">Edit Product</h5>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
     <div class="card-body">
       <form method="post" action="{{route('product.update',$product->id)}}">
         @csrf 
@@ -78,6 +82,7 @@
           @enderror
         </div>
         <div class="form-group">
+<<<<<<< HEAD
         <label for="size">IBAN</label>
         @php
             $ibans = explode(',', $product->size);
@@ -91,6 +96,26 @@
           <label for="brand_id">Author</label>
           <select name="brand_id" class="form-control">
               <option value="">--Select Author--</option>
+=======
+          <label for="size">Language</label>
+          <select name="size[]" class="form-control selectpicker"  multiple data-live-search="true">
+              <option value="">--Select any size--</option>
+              @foreach($items as $item)              
+                @php 
+                $data=explode(',',$item->size);
+                // dd($data);
+                @endphp
+              <option value="Nepali"  @if( in_array( "Nepali",$data ) ) selected @endif>Small</option>
+              <option value="English"  @if( in_array( "English",$data ) ) selected @endif>Medium</option>
+              <option value="Hindi"  @if( in_array( "Hindi",$data ) ) selected @endif>Large</option>
+              @endforeach
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="brand_id">Brand</label>
+          <select name="brand_id" class="form-control">
+              <option value="">--Select an Author--</option>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
              @foreach($brands as $brand)
               <option value="{{$brand->id}}" {{(($product->brand_id==$brand->id)? 'selected':'')}}>{{$brand->title}}</option>
              @endforeach
@@ -101,9 +126,15 @@
           <label for="condition">Condition</label>
           <select name="condition" class="form-control">
               <option value="">--Select Condition--</option>
+<<<<<<< HEAD
               <option value="default" {{(($product->condition=='default')? 'selected':'')}}>Default</option>
               <option value="new" {{(($product->condition=='new')? 'selected':'')}}>New</option>
               <option value="hot" {{(($product->condition=='hot')? 'selected':'')}}>Nepali</option>
+=======
+              <option value="default" {{(($product->condition=='Best Seller')? 'selected':'')}}>Best Seller</option>
+              <option value="new" {{(($product->condition=='New Arrivals)? 'selected':'')}}>New Arrivals</option>
+              <option value="hot" {{(($product->condition=='Nepali Books')? 'selected':'')}}>Nepali Books</option>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
           </select>
         </div>
 

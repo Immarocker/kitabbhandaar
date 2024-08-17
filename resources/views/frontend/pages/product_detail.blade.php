@@ -99,6 +99,7 @@
 												</ul>
 											</div> --}}
 											<!--/ End Color -->
+<<<<<<< HEAD
 											<!-- IBAN -->
 											@if($product_detail->size)
 											<div class="size mt-4">
@@ -115,6 +116,24 @@
 											</div>
 										@endif
 											<!--/ IBAN -->
+=======
+											<!-- Size -->
+											@if($product_detail->size)
+												<div class="size mt-4">
+													<h4>Size</h4>
+													<ul>
+														@php 
+															$sizes=explode(',',$product_detail->size);
+															// dd($sizes);
+														@endphp
+														@foreach($sizes as $size)
+														<li><a href="#" class="one">{{$size}}</a></li>
+														@endforeach
+													</ul>
+												</div>
+											@endif
+											<!--/ End Size -->
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 											<!-- Product Buy -->
 											<div class="product-buy">
 												<form action="{{route('single-add-to-cart')}}" method="POST">

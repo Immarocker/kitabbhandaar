@@ -2,6 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
 <?php
     $test = request()->email;
 ?>
@@ -9,6 +10,8 @@
 
 @if($test == "")
 
+=======
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -52,6 +55,7 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 @endif
 @if($test!= "")
 <div class="container">
@@ -99,4 +103,6 @@
     </div>
 </div>
 @endif
+=======
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 @endsection

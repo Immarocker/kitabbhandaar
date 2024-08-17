@@ -357,7 +357,11 @@ class FrontendController extends Controller
             return redirect()->route('home');
         }
         else{
+<<<<<<< HEAD
             request()->session()->flash('error','Invalid email and password please try again!');
+=======
+            request()->session()->flash('error','Invalid email and password pleas try again!');
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
             return redirect()->back();
         }
     }
@@ -377,7 +381,11 @@ class FrontendController extends Controller
         $this->validate($request,[
             'name'=>'string|required|min:2',
             'email'=>'string|required|unique:users,email',
+<<<<<<< HEAD
             'password'=>'required|min:4|confirmed',
+=======
+            'password'=>'required|min:6|confirmed',
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         ]);
         $data=$request->all();
         // dd($data);
@@ -385,10 +393,17 @@ class FrontendController extends Controller
         Session::put('user',$data['email']);
         if($check){
             request()->session()->flash('success','Successfully registered');
+<<<<<<< HEAD
             return redirect()->route('login.form');
         }
         else{
             request()->session()->flash('error','Registration failed. Please try again!');
+=======
+            return redirect()->route('home');
+        }
+        else{
+            request()->session()->flash('error','Please try again!');
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
             return back();
         }
     }
@@ -406,6 +421,7 @@ class FrontendController extends Controller
     }
 
     public function subscribe(Request $request){
+<<<<<<< HEAD
         $request->validate([
             'subscriber_email'=> 'required|email'
         ]);
@@ -421,4 +437,23 @@ class FrontendController extends Controller
             return redirect()->back()->with('error', $e->getMessage());
         }
     }
+=======
+        if(! Newsletter::isSubscribed($request->email)){
+                Newsletter::subscribePending($request->email);
+                if(Newsletter::lastActionSucceeded()){
+                    request()->session()->flash('success','Subscribed! Please check your email');
+                    return redirect()->route('home');
+                }
+                else{
+                    Newsletter::getLastError();
+                    return back()->with('error','Something went wrong! please try again');
+                }
+            }
+            else{
+                request()->session()->flash('error','Already Subscribed');
+                return back();
+            }
+    }
+    
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 }

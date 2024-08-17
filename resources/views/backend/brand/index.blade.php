@@ -1,5 +1,9 @@
 @extends('backend.layouts.master')
+<<<<<<< HEAD
 @section('title','Kitabbhandaar || Author Page')
+=======
+@section('title','E-SHOP || Author Page')
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 @section('main-content')
  <!-- DataTales Example -->
  <div class="card shadow mb-4">

@@ -227,7 +227,11 @@
 										<!-- End Single List -->
 									@endforeach
 								@else
+<<<<<<< HEAD
 									<h4 class="text-warning" style="margin:100px auto;">There are no books.</h4>
+=======
+									<h4 class="text-warning" style="margin:100px auto;">There are no products.</h4>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 								@endif
 							</div>
 							 <div class="row">

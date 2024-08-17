@@ -30,7 +30,11 @@
 							@php
 								$settings=DB::table('settings')->get();
 							@endphp
+<<<<<<< HEAD
 							<h3>Welcome To <span>Kitabbhandaar</span></h3>
+=======
+							<h3>Welcome To <span>Eshop</span></h3>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
 							<p>@foreach($settings as $data) {{$data->description}} @endforeach</p>
 							<div class="button">
 								<a href="{{route('blog')}}" class="btn">Our Blog</a>

@@ -16,7 +16,11 @@
         @enderror
         </div>     
         <div class="form-group">
+<<<<<<< HEAD
           <label for="price" class="col-form-label">Price<span class="text-danger">*</span></label>
+=======
+          <label for="price" class="col-form-label">Price <span class="text-danger">*</span></label>
+>>>>>>> efc5db2e52dd3c5e287448d2561fe52e57541dd7
         <input id="price" type="number" name="price" placeholder="Enter price"  value="{{$shipping->price}}" class="form-control">
         @error('price')
         <span class="text-danger">{{$message}}</span>
